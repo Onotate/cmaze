@@ -1,4 +1,5 @@
 #include "grid.h"
+#include "string.h"
 
 Grid *newGrid(int w, int h) {
   Grid *temp = malloc(sizeof(Grid));
@@ -55,5 +56,5 @@ static int getCellNeighborCount(Grid *g, int x, int y) {
 }
 
 bool isValidCell(Grid *g, int x, int y) {
-  return !isEdge(g, (Cell){x, y}) && getCellNeighborCount(g, x, y) <= 1;
+  return !isEdge(g, (Cell){x, y}) && getCellNeighborCount(g, x, y) == 0;
 }

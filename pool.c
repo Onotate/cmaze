@@ -1,15 +1,12 @@
 #include "pool.h"
 
-Pool *newPool(int max_size) {
-  Pool *new = malloc(sizeof(Pool));
-  new->data = malloc(max_size * sizeof(Cell));
-  new->size = 0;
-  return new;
+void initPool(Pool *pool, int max_size) {
+  pool->data = malloc(max_size * sizeof(Cell));
+  pool->size = 0;
 }
 
 void freePool(Pool *p) {
   free(p->data);
-  free(p);
   return;
 }
 

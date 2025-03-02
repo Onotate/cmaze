@@ -5,7 +5,7 @@ typedef struct cell_pool {
   int size;
 } Pool;
 
-Pool *newPool(int max_size);
+void initPool(Pool* pool, int max_size);
 void freePool(Pool *p);
 Cell getCellFromPool(Pool *p, int index);
 void delCellFromPool(Pool *p, int index);
