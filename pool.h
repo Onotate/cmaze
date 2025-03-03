@@ -2,7 +2,8 @@
 
 typedef struct cell_pool {
   Cell *data;
-  int size;
+  unsigned size;
+  unsigned max;
 } Pool;
 
 void initPool(Pool* pool, int max_size);
